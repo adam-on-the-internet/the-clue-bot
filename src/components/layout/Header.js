@@ -5,13 +5,18 @@ function Header() {
     return (
         <header style={headerStyle}>
             <h1>The Clue Bot</h1>
-            <div>
+            <h2>
+                <a style={linkStyle} href="https://twitter.com/TheClueBot" target="_blank" rel="noreferrer">
+                    on Twitter @TheClueBot
+                </a>
+            </h2>
+            <h3>
                 <Link to="/" style={linkStyle}>Home</Link>
                 |
                 <Link to="/about" style={linkStyle}>About</Link>
                 |
                 <Link to="/stats" style={linkStyle}>Stats</Link>
-            </div>
+            </h3>
         </header>
     );
 }
