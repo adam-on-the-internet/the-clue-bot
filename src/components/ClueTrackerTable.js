@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import ClueTrackerRow from "./ClueTrackerRow";
 
 class ClueTrackerTable extends Component {
     render() {
@@ -7,13 +8,13 @@ class ClueTrackerTable extends Component {
 
         if (options === undefined) {
             return (
-                <></>
+                <p>{tableName} options are not known yet.</p>
             );
         }
 
-        const choiceRows = options.map((choice, index) => {
-            return buildClueTrackerRow(choice, announcements, index);
-        });
+        const choiceRows = options.map((choice, index) => (
+            <ClueTrackerRow key={index} item={choice} announcements={announcements} index={index}/>
+        ));
         return (
             <>
                 <h3>{tableName} Clue Tracker</h3>
@@ -32,32 +33,6 @@ class ClueTrackerTable extends Component {
             </>
         );
     }
-}
-
-
-function buildClueTrackerRow(item, announcements, index) {
-    const relevantClue = announcements.find((clue) => {
-        return clue.includes("Clue #") && clue.includes(item);
-    });
-    const clueRevealed = relevantClue !== undefined;
-    let itemSymbol = "";
-    let itemClue = "";
-    if (clueRevealed) {
-        itemSymbol = "X";
-        itemClue = removeStatusFromAnnouncement(relevantClue, item);
-    }
-    return (
-        <tr key={index}>
-            <td>{item}</td>
-            <td>{itemSymbol}</td>
-            <td>{itemClue}</td>
-        </tr>
-    );
-}
-
-function removeStatusFromAnnouncement(announcement) {
-    const statusStart = announcement.indexOf("(The");
-    return announcement.slice(0, statusStart);
 }
 
 ClueTrackerTable.propTypes = {
