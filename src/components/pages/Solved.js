@@ -14,7 +14,7 @@ class Solved extends Component {
 
         const mysteries = solvedMysteries.map(mystery => (
             <li>
-                <Link to={'/mystery/' + mystery._id} style={linkStyle}>{mystery.title}</Link>
+                <Link key={mystery._id} to={'/mystery/' + mystery._id} style={linkStyle}>{mystery.title}</Link>
             </li>
         ));
 

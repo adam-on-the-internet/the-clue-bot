@@ -39,22 +39,20 @@ class App extends Component {
                         )}/>
                         <Route exact path="/stats" render={props => (
                             <React.Fragment>
-                                <h1>Stats</h1>
+                                <h2>Stats</h2>
                                 <hr/>
                                 <Stats stats={this.state.stats}/>
                             </React.Fragment>
                         )}/>
                         <Route exact path="/solved" render={props => (
                             <React.Fragment>
-                                <h1>Solved Mysteries</h1>
+                                <h2>Solved Mysteries</h2>
                                 <hr/>
                                 <Solved solvedMysteries={this.state.solvedMysteries}/>
                             </React.Fragment>
                         )}/>
                         <Route exact path="/mystery/:id" render={props => (
                             <React.Fragment>
-                                <h1>Mystery Details</h1>
-                                <hr/>
                                 <Mystery solvedMysteries={this.state.solvedMysteries} id={props.match.params.id}/>
                             </React.Fragment>
                         )}/>

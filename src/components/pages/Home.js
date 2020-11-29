@@ -7,8 +7,6 @@ class Home extends Component {
         const {currentMystery} = this.props;
         return (
             <div>
-                <h1>Current Mystery</h1>
-                <hr/>
                 <MysteryDisplay mystery={currentMystery}/>
             </div>
         );

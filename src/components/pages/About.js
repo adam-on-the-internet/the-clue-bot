@@ -4,7 +4,7 @@ class About extends Component {
     render() {
         return (
             <div>
-                <h1>About</h1>
+                <h2>About</h2>
                 <hr/>
                 <p>
                     The Clue Bot runs through a cycle of creating and solving murder mysteries. Each mystery consists of

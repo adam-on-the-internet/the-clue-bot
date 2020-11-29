@@ -19,7 +19,7 @@ class MysteryDisplay extends Component {
 
         return (
             <div>
-                <h3>{mystery.title}</h3>
+                <h2>{mystery.title}</h2>
                 <hr/>
                 <MysteryDate mystery={mystery}/>
                 <MysterySolved mystery={mystery} />
