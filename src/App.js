@@ -7,18 +7,19 @@ import {CLUE_BOT_CURRENT, CLUE_BOT_SOLVED, CLUE_BOT_STATS} from "./constants";
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
 import Stats from "./components/pages/Stats";
-import MysteryDisplay from "./components/MysteryDisplay";
+import Solved from "./components/pages/Solved";
+import Mystery from "./components/pages/Mystery";
 
 class App extends Component {
     state = {
-        solved: null,
+        solvedMysteries: null,
         currentMystery: null,
         stats: null,
     };
 
     componentDidMount() {
         axios.get(CLUE_BOT_SOLVED)
-            .then(res => this.setState({solved: res.data}));
+            .then(res => this.setState({solvedMysteries: res.data}));
         axios.get(CLUE_BOT_CURRENT)
             .then(res => this.setState({currentMystery: res.data}));
         axios.get(CLUE_BOT_STATS)
@@ -33,17 +34,30 @@ class App extends Component {
                         <Header/>
                         <Route exact path="/" render={props => (
                             <React.Fragment>
-                                <Home />
-                                <MysteryDisplay mystery={this.state.currentMystery} />
+                                <Home currentMystery={this.state.currentMystery}/>
                             </React.Fragment>
-                        )} />
+                        )}/>
                         <Route exact path="/stats" render={props => (
                             <React.Fragment>
                                 <h1>Stats</h1>
                                 <hr/>
-                                <Stats stats={this.state.stats} />
+                                <Stats stats={this.state.stats}/>
                             </React.Fragment>
-                        )} />
+                        )}/>
+                        <Route exact path="/solved" render={props => (
+                            <React.Fragment>
+                                <h1>Solved Mysteries</h1>
+                                <hr/>
+                                <Solved solvedMysteries={this.state.solvedMysteries}/>
+                            </React.Fragment>
+                        )}/>
+                        <Route exact path="/mystery/:id" render={props => (
+                            <React.Fragment>
+                                <h1>Mystery Details</h1>
+                                <hr/>
+                                <Mystery solvedMysteries={this.state.solvedMysteries} id={props.match.params.id}/>
+                            </React.Fragment>
+                        )}/>
                         <Route path="/about" exact component={About}/>
                     </div>
                 </div>

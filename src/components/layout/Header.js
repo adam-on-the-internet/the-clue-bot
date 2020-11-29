@@ -11,7 +11,9 @@ function Header() {
                 </a>
             </h2>
             <h3>
-                <Link to="/" style={linkStyle}>Home</Link>
+                <Link to="/" style={linkStyle}>Current Mystery</Link>
+                |
+                <Link to="/solved" style={linkStyle}>Solved Mysteries</Link>
                 |
                 <Link to="/about" style={linkStyle}>About</Link>
                 |

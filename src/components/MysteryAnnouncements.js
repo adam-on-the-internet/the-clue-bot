@@ -5,9 +5,19 @@ class MysteryAnnouncements extends Component {
     render() {
         const {mystery} = this.props;
 
+        const announcements = mystery.announcements.map((announcement, i) => {
+           return (
+               <li key={i}>
+                   Announcement #{i}
+               </li>
+           );
+        });
+
         return (
             <div>
-                <p>...</p>
+                <ul>
+                    {announcements}
+                </ul>
             </div>
         );
     }

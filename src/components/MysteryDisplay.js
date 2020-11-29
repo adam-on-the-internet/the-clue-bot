@@ -23,8 +23,8 @@ class MysteryDisplay extends Component {
                 <hr/>
                 <MysteryDate mystery={mystery}/>
                 <MysterySolved mystery={mystery} />
-                <MysteryAnnouncements mystery={mystery} />
                 <MysteryClueTracker mystery={mystery} />
+                <MysteryAnnouncements mystery={mystery} />
             </div>
         );
     }

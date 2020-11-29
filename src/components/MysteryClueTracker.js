@@ -7,7 +7,7 @@ class MysteryClueTracker extends Component {
 
         return (
             <div>
-                <p>...</p>
+                <p>[Clue Tracker]</p>
             </div>
         );
     }
