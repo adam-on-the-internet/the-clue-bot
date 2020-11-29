@@ -18,7 +18,7 @@ class ClueTrackerTable extends Component {
         return (
             <>
                 <h3>{tableName} Clue Tracker</h3>
-                <table>
+                <table style={tableStyle}>
                     <thead>
                     <tr>
                         <th>{tableName}</th>
@@ -33,6 +33,12 @@ class ClueTrackerTable extends Component {
             </>
         );
     }
+}
+
+const tableStyle = {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: 10,
 }
 
 ClueTrackerTable.propTypes = {

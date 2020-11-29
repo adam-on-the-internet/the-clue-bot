@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Loading from "../layout/Loading";
-import MysteryDisplay from "../MysteryDisplay";
+import MysteryDisplay from "../MysteryDisplay/MysteryDisplay";
 
 class Mystery extends Component {
     render() {

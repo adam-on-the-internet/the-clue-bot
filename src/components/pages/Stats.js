@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Loading from "../layout/Loading";
-import OccurrenceDisplay from "../OccurrenceDisplay";
+import OccurrenceDisplay from "../MysteryStats/OccurrenceDisplay";
 
 class Stats extends Component {
     render() {

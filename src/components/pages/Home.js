@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MysteryDisplay from "../MysteryDisplay";
+import MysteryDisplay from "../MysteryDisplay/MysteryDisplay";
 import PropTypes from 'prop-types';
 
 class Home extends Component {
