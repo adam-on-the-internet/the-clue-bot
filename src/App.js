@@ -7,11 +7,12 @@ import {CLUE_BOT_CURRENT, CLUE_BOT_SOLVED, CLUE_BOT_STATS} from "./constants";
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
 import Stats from "./components/pages/Stats";
+import MysteryDisplay from "./components/MysteryDisplay";
 
 class App extends Component {
     state = {
         solved: null,
-        current: null,
+        currentMystery: null,
         stats: null,
     };
 
@@ -19,7 +20,7 @@ class App extends Component {
         axios.get(CLUE_BOT_SOLVED)
             .then(res => this.setState({solved: res.data}));
         axios.get(CLUE_BOT_CURRENT)
-            .then(res => this.setState({current: res.data}));
+            .then(res => this.setState({currentMystery: res.data}));
         axios.get(CLUE_BOT_STATS)
             .then(res => this.setState({stats: res.data}));
     }
@@ -33,6 +34,7 @@ class App extends Component {
                         <Route exact path="/" render={props => (
                             <React.Fragment>
                                 <Home />
+                                <MysteryDisplay mystery={this.state.currentMystery} />
                             </React.Fragment>
                         )} />
                         <Route exact path="/stats" render={props => (
