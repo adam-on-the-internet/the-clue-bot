@@ -30,9 +30,19 @@ class App extends Component {
                 <div className="App">
                     <div className="container">
                         <Header/>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/stats" component={Stats}/>
+                        <Route exact path="/" render={props => (
+                            <React.Fragment>
+                                <Home />
+                            </React.Fragment>
+                        )} />
+                        <Route exact path="/stats" render={props => (
+                            <React.Fragment>
+                                <h1>Stats</h1>
+                                <hr/>
+                                <Stats stats={this.state.stats} />
+                            </React.Fragment>
+                        )} />
+                        <Route path="/about" exact component={About}/>
                     </div>
                 </div>
             </Router>
