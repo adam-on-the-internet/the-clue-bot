@@ -6,6 +6,7 @@ class About extends Component {
             <div>
                 <h2>About</h2>
                 <hr/>
+                <div style={textStyle}>
                 <p>
                     The Clue Bot runs through a cycle of creating and solving murder mysteries. Each mystery consists of
                     a Victim, Culprit, Murder Weapon, Crime Scene, and Clues that lead to the solution. These aspects
@@ -20,9 +21,16 @@ class About extends Component {
                         Adam on the Internet
                     </a>
                 </p>
+                </div>
             </div>
         );
     }
 }
+
+const textStyle = {
+    paddingLeft: 30,
+    paddingRight: 30,
+    textAlign: 'left',
+};
 
 export default About;
