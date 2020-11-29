@@ -6,22 +6,39 @@ class MysteryAnnouncements extends Component {
         const {mystery} = this.props;
 
         const announcements = mystery.announcements.map((announcement, i) => {
-           return (
-               <li key={i}>
-                   Announcement #{i}
-               </li>
-           );
+            const trimmedAnnouncement = removeStatusFromAnnouncement(announcement);
+            return (
+                <li key={i} style={itemStyle}>
+                    {trimmedAnnouncement}
+                </li>
+            );
         });
 
         return (
             <div>
-                <ul>
+                <hr/>
+                <h3>Announcements</h3>
+                <hr/>
+                <ul style={listStyle}>
                     {announcements}
                 </ul>
             </div>
         );
     }
 }
+
+function removeStatusFromAnnouncement(announcement) {
+    const statusStart = announcement.indexOf("(The");
+    return announcement.slice(0, statusStart);
+}
+
+const listStyle = {
+    textAlign: "left",
+};
+
+const itemStyle = {
+    marginTop: 10,
+};
 
 MysteryAnnouncements.propTypes = {
     mystery: PropTypes.object,

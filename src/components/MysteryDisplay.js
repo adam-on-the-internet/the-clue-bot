@@ -15,8 +15,6 @@ class MysteryDisplay extends Component {
             );
         }
 
-        console.log(mystery);
-
         return (
             <div>
                 <h2>{mystery.title}</h2>
