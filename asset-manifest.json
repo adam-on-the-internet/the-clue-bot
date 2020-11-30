@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/the-clue-bot/static/css/main.75603609.chunk.css",
+    "main.js": "/the-clue-bot/static/js/main.a90ec023.chunk.js",
+    "main.js.map": "/the-clue-bot/static/js/main.a90ec023.chunk.js.map",
+    "runtime-main.js": "/the-clue-bot/static/js/runtime-main.6641e473.js",
+    "runtime-main.js.map": "/the-clue-bot/static/js/runtime-main.6641e473.js.map",
+    "static/js/2.430af006.chunk.js": "/the-clue-bot/static/js/2.430af006.chunk.js",
+    "static/js/2.430af006.chunk.js.map": "/the-clue-bot/static/js/2.430af006.chunk.js.map",
+    "static/js/3.af1f987b.chunk.js": "/the-clue-bot/static/js/3.af1f987b.chunk.js",
+    "static/js/3.af1f987b.chunk.js.map": "/the-clue-bot/static/js/3.af1f987b.chunk.js.map",
+    "index.html": "/the-clue-bot/index.html",
+    "static/css/main.75603609.chunk.css.map": "/the-clue-bot/static/css/main.75603609.chunk.css.map",
+    "static/js/2.430af006.chunk.js.LICENSE.txt": "/the-clue-bot/static/js/2.430af006.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6641e473.js",
+    "static/js/2.430af006.chunk.js",
+    "static/css/main.75603609.chunk.css",
+    "static/js/main.a90ec023.chunk.js"
+  ]
+}
