@@ -28,7 +28,7 @@ class App extends Component {
 
     render() {
         return (
-            <Router basename="/the-clue-bot">
+            <Router basename="https://adam-on-the-internet.github.io/the-clue-bot/">
                 <div className="App">
                     <div className="container">
                         <Header/>
